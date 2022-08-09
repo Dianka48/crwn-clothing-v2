@@ -6,8 +6,13 @@ import { useDispatch } from "react-redux";
 import { addItemToCart } from "../../store/cart/cart.action";
 import { useSelector } from "react-redux";
 import { selectCartItems } from "../../store/cart/cart.selector";
+import { CategoryItem } from "../../store/category/category.types";
 
-const ProductCard = ({ product }) => {
+type ProductProps = {
+  product: CategoryItem;
+};
+
+const ProductCard = ({ product }: ProductProps) => {
   const dispatch = useDispatch();
   const { name, imageUrl, price } = product;
   // const { addItemToCart } = useContext(CartContext);

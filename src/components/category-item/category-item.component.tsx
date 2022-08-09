@@ -1,7 +1,11 @@
 import "./category-item.styles.scss";
 import { Link } from "react-router-dom";
 
-const CategoryItem = ({ category }) => {
+type CategoryItemProps = {
+  category: { title: string; imageUrl: string; route: string };
+};
+
+const CategoryItem = ({ category }: CategoryItemProps) => {
   const { imageUrl, title, route } = category;
   return (
     <div className="category-item-container">
