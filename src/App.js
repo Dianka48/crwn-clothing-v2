@@ -1,9 +1,5 @@
-// import HomePage from "./routes/home/home-page.component";
 import { Routes, Route } from "react-router-dom";
-// import HomeNavigation from "./routes/navigation/home-navigation.component";
-// import AuthenticationForms from "./routes/authentication/authentication-forms.component";
-// import Shop from "./routes/shop/shop-component";
-// import Checkout from "./routes/checkout/checkout.component";
+import "./index.scss";
 import { useEffect, lazy, Suspense } from "react";
 import {
   onAuthStateChangedListener,

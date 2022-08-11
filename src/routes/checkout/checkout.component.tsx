@@ -8,6 +8,7 @@ import {
   selectCartItems,
 } from "../../store/cart/cart.selector";
 import { memo } from "react";
+import PaymentForm from "../../components/payment-form/payment.form.component";
 
 const Checkout = memo(() => {
   // const { cartItems, cartTotal } = useContext(CartContext);
@@ -38,6 +39,7 @@ const Checkout = memo(() => {
         <CheckoutItem key={cartItem.id} cartItem={cartItem} />
       ))}
       <span className="total">Total: ${cartTotal}</span>
+      <PaymentForm />
     </div>
   );
 });
