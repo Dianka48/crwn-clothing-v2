@@ -7,8 +7,9 @@ import {
   selectCartTotal,
   selectCartItems,
 } from "../../store/cart/cart.selector";
+import { memo } from "react";
 
-const Checkout = () => {
+const Checkout = memo(() => {
   // const { cartItems, cartTotal } = useContext(CartContext);
   const cartItems = useSelector(selectCartItems);
   const cartTotal = useSelector(selectCartTotal);
@@ -39,6 +40,6 @@ const Checkout = () => {
       <span className="total">Total: ${cartTotal}</span>
     </div>
   );
-};
+});
 
 export default Checkout;
